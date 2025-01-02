@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100%;
+            background-color: lightblue;
+            border: 1px solid;
+            text-align: center;
+        }
+        table, td {
+            border: 1px solid black;
+        }     
+        button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+        }   
+    </style>
+</head>
+<body>
+    <script>
+
+        // Question 1
+        /*
+        * Create a List and Append to the Body
+        * Create an unordered list (<ul>) with five list items (<li>), each containing unique text. Append the <ul> to the <body>.
+        */
+       let unorderedList = document.createElement("ul");
+       for (let i=0; i<5; i++) {
+        let listItem = document.createElement("li");
+        listItem.innerText = `i value is ${i}`;
+        unorderedList.appendChild(listItem);
+       }
+       document.body.appendChild(unorderedList);
+       document.body.appendChild(document.createElement("hr"));
+
+
+       // Question 2
+       /*
+       * Create a Paragraph Inside a Div and Append to the Body
+       * Create a <div> element, and inside it, add a <p> element with some descriptive text. Append the <div> to the <body>.
+       */
+      let divElement = document.createElement("div");
+      let paraElement = document.createElement("p");
+      paraElement.innerText = "lorem ipsum";
+      divElement.appendChild(paraElement);
+      document.body.appendChild(divElement);
+      document.body.appendChild(document.createElement("hr"));
+
+
+      // Question 3
+      /*
+      * Build a Nested Structure and Append to the Body
+      * Create a <div> containing a <h1> heading and a <p> paragraph, both with distinct text. Append the <div> to the <body>.
+      */
+      let divText = document.createElement("div");
+      let hText = document.createElement("h1");
+      hText.innerText = "Happy New Year 2025";
+      let pText = document.createElement("p");
+      pText.innerText = "Wishing you all a very happy and properous new year."
+      divText.appendChild(hText);
+      divText.appendChild(pText);
+      document.body.appendChild(divText);
+      document.body.append(document.createElement("hr"));
+
+      
+      // Question 4
+      /*
+      * Generate a Table Row and Append to the Body
+      * Create a <table> element with a single row (<tr>) and three cells (<td>), each containing some text. Append the <table> to the <body>.
+      */
+      let myTable = document.createElement("table");
+      let myRow = document.createElement("tr");
+      let myColumn1 = document.createElement("td");
+      myColumn1.innerText = "Name : ";
+      let myColumn2 = document.createElement("td");
+      myColumn2.innerText = "Hobbies : ";
+      let myColumn3 = document.createElement("td");
+      myColumn3.innerText = "Favorite Music Albums : ";
+      myRow.appendChild(myColumn1);
+      myRow.appendChild(myColumn2);
+      myRow.appendChild(myColumn3);
+      myTable.appendChild(myRow);
+      document.body.appendChild(myTable);
+      document.body.appendChild(document.createElement("hr"));
+
+
+      // Question 5
+      /*
+      * Multiple Buttons and Append to the Body
+      * Create a <div> and append five <button> elements to it, each with unique text for the button label. Append the <div> to the <body>.
+      */
+      let div5 = document.createElement("div");
+      let button1 = document.createElement("button");
+      let button2 = document.createElement("button");
+      let button3 = document.createElement("button");
+      let button4 = document.createElement("button");
+      let button5 = document.createElement("button");
+      button1.innerText = "Civic Type R";
+      button2.innerText = "Nissan GTR Skyline";
+      button3.innerText = "Ford Mustang";
+      button4.innerText = "Chevrolet Camarro SS";
+      button5.innerText = "BMW M5";
+      div5.appendChild(button1);
+      div5.appendChild(button2);
+      div5.appendChild(button3);
+      div5.appendChild(button4);
+      div5.appendChild(button5);
+      document.body.appendChild(div5);
+      document.body.appendChild(document.createElement("hr"))
+    </script>
+</body>
+</html>
