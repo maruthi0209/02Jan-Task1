@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
         div {
             width: 100%;
+            height: auto;
             background-color: lightblue;
             border: 1px solid;
+            margin: 20px 0px;
             text-align: center;
+        }
+        #question1 {
+            text-align: left;   
         }
         table, td {
             border: 1px solid black;
@@ -19,9 +29,28 @@
             margin: 10px;
             padding: 10px;
         }   
+        table {
+            transform: translate(80%, -50%);
+        }
     </style>
 </head>
 <body>
+    <div id="question1">
+
+    </div>
+    <div id="question2">
+
+    </div>
+    <div id="question3">
+
+    </div>
+    <div id="question4">
+
+    </div>
+    <div id="question5">
+
+    </div>
+
     <script>
 
         // Question 1
@@ -30,12 +59,15 @@
         * Create an unordered list (<ul>) with five list items (<li>), each containing unique text. Append the <ul> to the <body>.
         */
        let unorderedList = document.createElement("ul");
+       let title1 = document.createElement("h1");
+       title1.innerText = "Question 1"; 
+       let question1 = document.getElementById("question1");
        for (let i=0; i<5; i++) {
         let listItem = document.createElement("li");
         listItem.innerText = `i value is ${i}`;
         unorderedList.appendChild(listItem);
        }
-       document.body.appendChild(unorderedList);
+       question1.append(title1, unorderedList);
        document.body.appendChild(document.createElement("hr"));
 
 
@@ -45,10 +77,13 @@
        * Create a <div> element, and inside it, add a <p> element with some descriptive text. Append the <div> to the <body>.
        */
       let divElement = document.createElement("div");
+      question2 = document.getElementById("question2");
+      let title2 = document.createElement("h1");
+        title2.innerText = "Question 2"; 
       let paraElement = document.createElement("p");
       paraElement.innerText = "lorem ipsum";
       divElement.appendChild(paraElement);
-      document.body.appendChild(divElement);
+      question2.append(title2, divElement);
       document.body.appendChild(document.createElement("hr"));
 
 
@@ -57,6 +92,9 @@
       * Build a Nested Structure and Append to the Body
       * Create a <div> containing a <h1> heading and a <p> paragraph, both with distinct text. Append the <div> to the <body>.
       */
+     let question3 = document.getElementById("question3");
+     let title3 = document.createElement("h1");
+     title3.innerText = "Question 3";
       let divText = document.createElement("div");
       let hText = document.createElement("h1");
       hText.innerText = "Happy New Year 2025";
@@ -64,7 +102,7 @@
       pText.innerText = "Wishing you all a very happy and properous new year."
       divText.appendChild(hText);
       divText.appendChild(pText);
-      document.body.appendChild(divText);
+      question3.append(title3, divText);
       document.body.append(document.createElement("hr"));
 
       
@@ -73,19 +111,22 @@
       * Generate a Table Row and Append to the Body
       * Create a <table> element with a single row (<tr>) and three cells (<td>), each containing some text. Append the <table> to the <body>.
       */
+      let question4 = document.getElementById("question4");
+     let title4 = document.createElement("h1");
+     title4.innerText = "Question 4";
       let myTable = document.createElement("table");
       let myRow = document.createElement("tr");
       let myColumn1 = document.createElement("td");
-      myColumn1.innerText = "Name : ";
+      myColumn1.innerText = "Name : Maruthi ";
       let myColumn2 = document.createElement("td");
-      myColumn2.innerText = "Hobbies : ";
+      myColumn2.innerText = "Hobbies : Video Games";
       let myColumn3 = document.createElement("td");
-      myColumn3.innerText = "Favorite Music Albums : ";
+      myColumn3.innerText = "Favorite Music Albums : London Grammar";
       myRow.appendChild(myColumn1);
       myRow.appendChild(myColumn2);
       myRow.appendChild(myColumn3);
       myTable.appendChild(myRow);
-      document.body.appendChild(myTable);
+      question4.append(title4, myTable);
       document.body.appendChild(document.createElement("hr"));
 
 
@@ -110,7 +151,10 @@
       div5.appendChild(button3);
       div5.appendChild(button4);
       div5.appendChild(button5);
-      document.body.appendChild(div5);
+      question5 = document.getElementById("question5");
+      let title5 = document.createElement("h1");
+        title5.innerText = "Question 5";
+      question5.append(title5, div5);
       document.body.appendChild(document.createElement("hr"))
     </script>
 </body>
